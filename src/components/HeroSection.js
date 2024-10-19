@@ -3,8 +3,8 @@ import TechTab from './TechTab'
 
 export default function HeroSection() {
     return (
-        <section id="hero-section" className="flex text-white gap-4 items-center min-h-full">
-            <div className='text-center gap-4 flex flex-col'>
+        <section id="hero-section" className="flex text-white gap-4 items-center h-[100vh]">
+            <div className='text-center gap-6 flex flex-col'>
                 <h1 className="text-6xl font-poppins font-medium">
                     Welcome human! I&apos;m Sarthak, a <span className="text-yellow-300">Frontend Web Developer</span> from India
                 </h1>
