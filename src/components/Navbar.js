@@ -6,7 +6,6 @@ export default function Navbar() {
           <nav className="flex justify-between items-center gap-8">
             <p className="cursor-pointer">Home</p>
             <p className="cursor-pointer">About</p>
-            <p className="cursor-pointer">Skills</p>
             <p className="cursor-pointer">Work</p>
             <p className="cursor-pointer">Contact</p>
             </nav>  
