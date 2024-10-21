@@ -1,5 +1,4 @@
-import Image from "next/image";
-import TechTab from "@/components/TechTab";
+import TechTab from "./TechTab";
 
 export default function HeroSection() {
   return (
@@ -21,6 +20,8 @@ export default function HeroSection() {
           <TechTab title={"Tailwind"} logo={"/tailwind.png"} />
           <TechTab title={"CSS"} logo={"/css.png"} />
           <TechTab title={"HTML"} logo={"/html.webp"} />
+          <TechTab title={"C++"} logo={"/cpp.png"} />
+          <TechTab title={"Figma"} logo={"/figma.png"} />
         </div>
       </div>
       {/* <div className='mt-5 rounded-full overflow-hidden'>

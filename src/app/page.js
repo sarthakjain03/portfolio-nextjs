@@ -1,7 +1,8 @@
-import Navbar from "@/sections/Navbar";
-import HeroSection from "@/sections/HeroSection";
-import AboutMe from "@/sections/AboutMe";
-import Experience from "@/sections/Experience";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutMe from "@/components/AboutMe";
+import Experience from "@/components/Experience";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <AboutMe />
       <Experience />
+      <Contact />
     </div>
   );
 }
