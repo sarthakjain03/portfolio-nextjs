@@ -3,7 +3,7 @@ import { LinkedIn, GitHub, X, Email } from "@mui/icons-material";
 export default function Contact() {
   return (
     <section
-      id="experience"
+      id="contact"
       className="flex text-white flex-col justify-center items-center gap-10 h-[100vh]"
     >
       <h1 className="text-4xl font-poppins font-medium">Connect With Me</h1>

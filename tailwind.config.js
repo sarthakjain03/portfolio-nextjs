@@ -14,6 +14,7 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "serif"],
         ubuntu: ["Ubuntu", "serif"],
+        playwrite: ["Playwrite GB S", "serif"],
       },
     },
   },
