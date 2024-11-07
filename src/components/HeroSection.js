@@ -1,4 +1,7 @@
 import TechTab from "./TechTab";
+import { techStack } from "@/data";
+
+const techs = ["JavaScript", "Next.js", "React.js", "Material UI", "Tailwind", "CSS", "HTML", "C++", "Figma"];
 
 export default function HeroSection() {
   return (
@@ -13,15 +16,10 @@ export default function HeroSection() {
           India
         </h1>
         <div className="flex gap-2 justify-center">
-          <TechTab title={"JavaScript"} logo={"/javascript.png"} />
-          <TechTab title={"Next.js"} logo={"/nextjs.jpg"} />
-          <TechTab title={"React.js"} logo={"/react.png"} />
-          <TechTab title={"Material UI"} logo={"/mui.svg"} />
-          <TechTab title={"Tailwind"} logo={"/tailwind.png"} />
-          <TechTab title={"CSS"} logo={"/css.png"} />
-          <TechTab title={"HTML"} logo={"/html.webp"} />
-          <TechTab title={"C++"} logo={"/cpp.png"} />
-          <TechTab title={"Figma"} logo={"/figma.png"} />
+          {techs?.map((tech) => (
+            <TechTab key={tech} title={tech} logo={techStack[tech]} />
+          ))}
+          
         </div>
       </div>
       {/* <div className='mt-5 rounded-full overflow-hidden'>
