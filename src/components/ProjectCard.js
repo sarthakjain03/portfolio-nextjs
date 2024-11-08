@@ -16,10 +16,22 @@ export default function ProjectCard({
   githubRepo,
 }) {
   const techArray = tech?.split(", ");
-  const [activeCard, setActiveCard] = useState(false);
+  const [activeCard, setActiveCard] = useState(0);
+
+  const handleClick = () => {
+    setActiveCard((prev) => {
+      if (prev === 0) return title;
+      return 0;
+    });
+  };
 
   return (
-    <motion.div className="flex flex-col gap-4 border border-white shadow shadow-white rounded-2xl overflow-hidden">
+    <motion.div
+      layoutId={title}
+      onHoverStart={handleClick}
+      onHoverEnd={handleClick}
+      className="flex flex-col gap-4 border border-white shadow shadow-white rounded-2xl overflow-hidden h-fit"
+    >
       <motion.div>
         <Image src={imgUrl} alt="project image" height={320} width={480} />
       </motion.div>
@@ -28,10 +40,7 @@ export default function ProjectCard({
           activeCard ? "pb-0" : "pb-4"
         }`}
       >
-        <p
-          onClick={() => setActiveCard((prev) => !prev)}
-          className="font-ubuntu font-semibold text-3xl cursor-pointer"
-        >
+        <p className="font-ubuntu font-semibold text-3xl">
           {title}
         </p>
         <div className="flex gap-3">
@@ -44,21 +53,17 @@ export default function ProjectCard({
         </div>
       </motion.div>
       <AnimatePresence>
-        {activeCard && (
+        {activeCard === title && (
           <motion.div
+            // layoutId={activeCard}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="flex flex-col gap-4 px-5 max-w-[480px]"
           >
-            <p
-              className="text-xl cursor-pointer"
-              onClick={() => setActiveCard(false)}
-            >
-              {description}
-            </p>
-            <div className="flex gap-3 pb-4">
+            <p className="text-xl cursor-pointer">{description}</p>
+            <div className="flex gap-3 pb-4 flex-wrap">
               {techArray?.map((tech) => (
                 <TechTab key={tech} title={tech} logo={techStack[tech]} />
               ))}

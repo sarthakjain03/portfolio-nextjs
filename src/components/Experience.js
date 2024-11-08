@@ -1,14 +1,28 @@
+'use client'
+import { useRef } from "react";
 import Image from "next/image";
+import { motion, useScroll, useAnimation, useMotionValueEvent } from "framer-motion";
 
 export default function Experience() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0.2 1", "1.4 1"]
+  })
+  const mainControls = useAnimation();
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    mainControls.set({ left: `${latest*100}%` })
+  });
+
   return (
     <section
       id="experience"
       className="flex text-white flex-col justify-center items-center gap-10 h-[100vh]"
     >
       <h1 className="text-5xl font-poppins font-medium">Experience</h1>
-      <div className="">
-        <div className="">
+      <motion.div ref={ref}>
+        <div className="relative overflow-hidden">
           <div className="flex items-center gap-4">
             <Image src="/beanbyte_logo.jpeg" alt="beanbyte_logo" width={60} height={60} className="rounded-full" />
             <h4 className="text-2xl text-yellow-300">
@@ -17,8 +31,8 @@ export default function Experience() {
           </div>
           <div className="flex ml-7">
             <div className="w-1 h-5 bg-slate-400"></div>
-            <div className="flex relative -left-[0.265rem] pt-4 gap-3">
-              <div className="w-14 h-7 border-b-4 rounded-t-none rounded-bl-full border-b-slate-400 border-l-4 border-l-slate-400"></div>
+            <div className="flex relative -left-[0.285rem] pt-4 gap-3">
+              <div className="w-14 h-8 border-b-4 rounded-t-none rounded-bl-full border-b-slate-400 border-l-4 border-l-slate-400"></div>
               <div className="flex flex-col">
                 <h5 className="font-ubuntu text-2xl text-[#FFF5E1]">
                   Software Development Intern (Frontend)
@@ -39,8 +53,13 @@ export default function Experience() {
               </div>
             </div>
           </div>
+          <motion.div
+            initial={{ left: 0 }}
+            animate={mainControls}
+            className="absolute top-0 size-full bg-black"
+          ></motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
