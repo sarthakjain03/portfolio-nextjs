@@ -1,8 +1,11 @@
+import SlideTabsNav from "./SlideTabs";
+
 export default function Navbar() {
   return (
-    <header className="flex items-center justify-between py-5 text-white fixed top-0 left-0 w-full px-20 backdrop-blur-md">
+    <header className="flex items-center justify-between py-2 text-white fixed top-0 left-0 w-full px-20 backdrop-blur-md z-10">
       <p className="font-semibold text-xl font-playwrite">Sarthak Jain</p>
-      <nav className="flex justify-between items-center gap-8 font-poppins">
+      <SlideTabsNav />
+      {/* <nav className="flex justify-between items-center gap-8 font-poppins">
         <a href="#hero-section" className="cursor-pointer hover:border-b hover:border-b-yellow-300">
           Home
         </a>
@@ -18,7 +21,7 @@ export default function Navbar() {
         <a href="#contact" className="cursor-pointer hover:border-b hover:border-b-yellow-300">
           Contact
         </a>
-      </nav>
+      </nav> */}
     </header>
   );
 }

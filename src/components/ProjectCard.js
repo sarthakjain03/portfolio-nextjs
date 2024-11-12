@@ -28,9 +28,8 @@ export default function ProjectCard({
   return (
     <motion.div
       layoutId={title}
-      onHoverStart={handleClick}
-      onHoverEnd={handleClick}
-      className="flex flex-col gap-4 border border-white shadow shadow-white rounded-2xl overflow-hidden h-fit"
+      onClick={handleClick}
+      className="cursor-pointer flex flex-col gap-4 border border-white shadow shadow-white rounded-2xl overflow-hidden h-fit"
     >
       <motion.div>
         <Image src={imgUrl} alt="project image" height={320} width={480} />

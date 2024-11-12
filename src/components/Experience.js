@@ -7,12 +7,12 @@ export default function Experience() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0.2 1", "1.4 1"]
+    offset: ["1 1", "1.8 1"]
   })
   const mainControls = useAnimation();
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    mainControls.set({ left: `${latest*100}%` })
+    mainControls.set({ top: `${latest*100}%` })
   });
 
   return (
@@ -54,9 +54,9 @@ export default function Experience() {
             </div>
           </div>
           <motion.div
-            initial={{ left: 0 }}
+            initial={{ top: 0 }}
             animate={mainControls}
-            className="absolute top-0 size-full bg-black"
+            className="absolute left-0 size-full bg-black"
           ></motion.div>
         </div>
       </motion.div>
