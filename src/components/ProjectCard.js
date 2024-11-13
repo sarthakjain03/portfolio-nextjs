@@ -6,6 +6,8 @@ import TechTab from "./TechTab";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Launch, GitHub } from "@mui/icons-material";
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 export default function ProjectCard({
   title,
@@ -15,6 +17,8 @@ export default function ProjectCard({
   liveLink,
   githubRepo,
 }) {
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down("lg"));
   const techArray = tech?.split(", ");
   const [activeCard, setActiveCard] = useState(0);
 
@@ -32,16 +36,14 @@ export default function ProjectCard({
       className="cursor-pointer flex flex-col gap-4 border border-white shadow shadow-white rounded-2xl overflow-hidden h-fit"
     >
       <motion.div>
-        <Image src={imgUrl} alt="project image" height={320} width={480} />
+        <Image src={imgUrl} alt="project image" height={isSmall ? 182 : 320} width={isSmall ? 418 : 480} />
       </motion.div>
       <motion.div
         className={`flex justify-between items-center px-5 ${
           activeCard ? "pb-0" : "pb-4"
         }`}
       >
-        <p className="font-ubuntu font-semibold text-3xl">
-          {title}
-        </p>
+        <p className="font-ubuntu font-semibold text-3xl">{title}</p>
         <div className="flex gap-3">
           <Link target="_blank" href={liveLink}>
             <Launch />

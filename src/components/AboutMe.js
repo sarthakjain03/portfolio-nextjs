@@ -7,12 +7,16 @@ import {
   useAnimation,
   useMotionValueEvent,
 } from "framer-motion";
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 
 export default function AboutMe() {
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down('lg'));
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0.4 1", "1.2 1"],
+    offset: ["0.3 1", "1.2 1"],
   });
   const leftBarControls = useAnimation();
   const rightBarControls = useAnimation();
@@ -28,19 +32,19 @@ export default function AboutMe() {
   return (
     <section
       id="aboutme"
-      className="flex text-white flex-col justify-center items-center gap-10 h-[100vh]"
+      className="flex text-white flex-col justify-center items-center gap-10 min-h-[100vh]"
     >
-      <h1 className="text-5xl font-poppins font-medium">About Me</h1>
-      <motion.div ref={ref} className="relative flex items-center w-full justify-around gap-20 overflow-hidden">
+      <h1 className="text-4xl lg:text-5xl font-poppins font-medium">About Me</h1>
+      <motion.div ref={ref} className="relative flex flex-col lg:flex-row items-center w-full lg:justify-around gap-10 lg:gap-20 overflow-x-hidden">
         <Image
           src="/dp.jpg"
-          width={300}
-          height={300}
+          width={isSmall ? 250 : 300}
+          height={isSmall ? 250 : 300}
           alt="Display Picture"
           className="rounded-full"
         />
-        <div className="w-[65%]">
-          <p className="text-lg">
+        <div className="lg:w-[65%] w-full">
+          <p className="lg:text-lg">
             Here&apos;s a little about myself - Final year student at IIIT
             Dharwad pursuing B.Tech in Computer Science and Engineering
             graduating in July 2025.{" "}
@@ -58,16 +62,20 @@ export default function AboutMe() {
             learning new and exciting technologies. Love to travel by the way 😉
           </p>
         </div>
-        <motion.div
-          initial={{ right: "50%" }}
-          animate={leftBarControls}
-          className="absolute bg-black size-full top-0"
-        ></motion.div>
-        <motion.div
-          initial={{ left: "50%" }}
-          animate={rightBarControls}
-          className="absolute bg-black size-full top-0"
-        ></motion.div>
+        {!isSmall && (
+          <>
+            <motion.div
+              initial={{ right: "50%" }}
+              animate={leftBarControls}
+              className="absolute bg-black size-full top-0"
+            ></motion.div>
+            <motion.div
+              initial={{ left: "50%" }}
+              animate={rightBarControls}
+              className="absolute bg-black size-full top-0"
+            ></motion.div>
+          </>
+        )}
       </motion.div>
     </section>
   );

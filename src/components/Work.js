@@ -7,8 +7,8 @@ export default function Work() {
       id="work"
       className="flex text-white flex-col justify-center items-center gap-10 min-h-[100vh]"
     >
-      <h1 className="text-5xl font-poppins font-medium">Work</h1>
-      <div className="flex gap-6">
+      <h1 className="text-4xl lg:text-5xl font-poppins font-medium">Work</h1>
+      <div className="flex gap-6 flex-wrap justify-center lg:justify-normal">
         {projects?.map((project) => (
           <ProjectCard
             key={project.title}

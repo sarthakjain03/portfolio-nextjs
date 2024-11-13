@@ -7,7 +7,7 @@ import Work from "@/components/Work";
 
 export default function Home() {
   return (
-    <div className="bg-black px-20">
+    <div className="bg-black px-10 sm:px-14 lg:px-20">
       <Navbar />
       <HeroSection />
       <AboutMe />

@@ -162,7 +162,6 @@ const Tab = ({ children, setPosition, activeTab, onClick, id, position }) => {
       onClick={() => onClick(id, ref)}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={() => {
-        console.log(position);
         setPosition((prev) => ({
             ...prev,
             left: position.activeLeft,

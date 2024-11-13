@@ -4,15 +4,15 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex text-white flex-col justify-center items-center gap-10 h-[100vh]"
+      className="flex text-white flex-col justify-center items-center gap-10 min-h-[100vh]"
     >
       <div className="flex flex-col justify-center items-center gap-4">
-        <h1 className="text-5xl font-poppins font-medium text-yellow-300">Get in touch!</h1>
-        <p className="font-poppins text-2xl">
+        <h1 className="text-4xl lg:text-5xl font-poppins font-medium text-yellow-300">Get in touch!</h1>
+        <p className="font-poppins text-xl lg:text-2xl text-center">
           I would love to connect with you and work on exciting different projects and ideas.
         </p>
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 flex-wrap justify-center">
         <a
           href="https://www.linkedin.com/in/sarthakjain-coder-developer/"
           target="_blank"
