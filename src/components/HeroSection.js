@@ -1,8 +1,6 @@
 'use client'
 import TechTab from "./TechTab";
-import { techStack } from "@/data";
-
-const techs = ["JavaScript", "Next.js", "React.js", "Material UI", "Tailwind", "CSS", "HTML", "C++", "Figma"];
+import { techStack, techs } from "@/data";
 
 export default function HeroSection() {
   return (

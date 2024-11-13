@@ -1,3 +1,5 @@
+export const techs = ["JavaScript", "Next.js", "React.js", "Material UI", "Tailwind", "CSS", "HTML", "C++", "Figma"];
+
 export const techStack = {
     "JavaScript": "/javascript.png",
     "Next.js": "/nextjs.jpg",
