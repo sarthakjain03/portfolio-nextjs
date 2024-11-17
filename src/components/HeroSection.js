@@ -16,7 +16,7 @@ export default function HeroSection() {
     >
       <div className="text-center gap-6 flex flex-col relative">
         <h1 className="text-4xl lg:text-6xl font-poppins font-medium z-[2]">
-          Welcome human! I&apos;m Sarthak, a{" "}
+          Hey there! I&apos;m Sarthak Jain, a{" "}
           <span className="text-yellow-300">Frontend Web Developer</span> from
           India
         </h1>
