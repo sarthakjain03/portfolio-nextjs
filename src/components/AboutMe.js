@@ -57,9 +57,9 @@ export default function AboutMe() {
             </span>{" "}
             at an early stage startup in India. Proficient with React.js,
             Tailwind CSS, Material UI. Currently learning and building with
-            Next.js. Open to full-time employment opportunities onsite in India
+            Next.js. Open to FTE opportunities onsite and remote in India
             and remote internationally starting January 2025. Also interested in
-            learning new and exciting technologies. Love to travel by the way 😉
+            learning new and exciting technologies.
           </p>
         </div>
         {!isSmall && (

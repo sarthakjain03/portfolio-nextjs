@@ -13,16 +13,6 @@ import { useTheme } from "@mui/material/styles";
 export default function Experience() {
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down("lg"));
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["1 1", "1.8 1"],
-  });
-  const mainControls = useAnimation();
-
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    mainControls.set({ height: `${(1 - latest) * 100}%` });
-  });
 
   return (
     <section
@@ -32,7 +22,7 @@ export default function Experience() {
       <h1 className="text-4xl lg:text-5xl font-poppins font-medium">
         Experience
       </h1>
-      <motion.div ref={ref}>
+      <div>
         <div className="relative overflow-hidden">
           <div className="flex items-center gap-4 ml-1 lg:ml-0">
             <Image
@@ -85,13 +75,8 @@ export default function Experience() {
               </div>
             </div>
           </div>
-          <motion.div
-            initial={{ height: "100%" }}
-            animate={mainControls}
-            className="absolute left-0 bottom-0 size-full bg-black"
-          ></motion.div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
