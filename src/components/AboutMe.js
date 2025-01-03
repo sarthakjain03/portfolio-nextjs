@@ -1,33 +1,11 @@
 "use client";
-import { useRef } from "react";
 import Image from "next/image";
-import {
-  motion,
-  useScroll,
-  useAnimation,
-  useMotionValueEvent,
-} from "framer-motion";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 
 export default function AboutMe() {
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down('lg'));
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0.3 1", "1.2 1"],
-  });
-  const leftBarControls = useAnimation();
-  const rightBarControls = useAnimation();
-
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    leftBarControls.set({ right: `${latest * 100}%` });
-  });
-
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    rightBarControls.set({ left: `${latest * 100}%` });
-  });
 
   return (
     <section
@@ -35,7 +13,7 @@ export default function AboutMe() {
       className="flex text-white flex-col justify-center items-center gap-10 min-h-[100vh]"
     >
       <h1 className="text-4xl lg:text-5xl font-poppins font-medium">About Me</h1>
-      <motion.div ref={ref} className="relative flex flex-col lg:flex-row items-center w-full lg:justify-around gap-10 lg:gap-20 overflow-x-hidden">
+      <div className="flex flex-col lg:flex-row items-center w-full lg:justify-around gap-10 lg:gap-20 overflow-x-hidden">
         <Image
           src="/dp.jpg"
           width={isSmall ? 250 : 300}
@@ -62,21 +40,7 @@ export default function AboutMe() {
             learning new and exciting technologies.
           </p>
         </div>
-        {!isSmall && (
-          <>
-            <motion.div
-              initial={{ right: "50%" }}
-              animate={leftBarControls}
-              className="absolute bg-black size-full top-0"
-            ></motion.div>
-            <motion.div
-              initial={{ left: "50%" }}
-              animate={rightBarControls}
-              className="absolute bg-black size-full top-0"
-            ></motion.div>
-          </>
-        )}
-      </motion.div>
+      </div>
     </section>
   );
 }
