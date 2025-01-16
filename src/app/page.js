@@ -15,7 +15,7 @@ export default function Home() {
       <Work />
       <Contact />
       <p className="text-center text-gray-400 pb-2 font-medium text-sm">
-        Copyright &copy; 2024 by Sarthak Jain
+        Copyright &copy; 2025 by Sarthak Jain
       </p>
     </div>
   );

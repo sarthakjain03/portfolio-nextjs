@@ -32,16 +32,22 @@ export default function ProjectCard({
   return (
     <motion.div
       layoutId={title}
-      onClick={handleClick}
-      className="cursor-pointer flex flex-col gap-4 border border-white shadow shadow-white rounded-2xl overflow-hidden h-fit"
+      //onClick={handleClick}
+      className="flex flex-col gap-4 border border-white shadow shadow-white rounded-2xl overflow-hidden h-fit"
     >
       <motion.div>
-        <Image src={imgUrl} alt="project image" height={isSmall ? 182 : 320} width={isSmall ? 418 : 480} />
+        <Image
+          src={imgUrl}
+          alt="project image"
+          height={isSmall ? 182 : 320}
+          width={isSmall ? 418 : 480}
+        />
       </motion.div>
       <motion.div
-        className={`flex justify-between items-center px-5 ${
-          activeCard ? "pb-0" : "pb-4"
-        }`}
+        // className={`flex justify-between items-center px-5 ${
+        //   activeCard ? "pb-0" : "pb-4"
+        // }`}
+        className={`flex justify-between items-center px-5`}
       >
         <p className="font-ubuntu font-semibold text-3xl">{title}</p>
         <div className="flex gap-3">
@@ -53,7 +59,15 @@ export default function ProjectCard({
           </Link>
         </div>
       </motion.div>
-      <AnimatePresence>
+      <motion.div className="flex flex-col gap-4 px-5 max-w-[480px]">
+        <p className="text-xl cursor-pointer">{description}</p>
+        <div className="flex gap-3 pb-4 flex-wrap">
+          {techArray?.map((tech) => (
+            <TechTab key={tech} title={tech} logo={techStack[tech]} />
+          ))}
+        </div>
+      </motion.div>
+      {/* <AnimatePresence>
         {activeCard === title && (
           <motion.div
             // layoutId={activeCard}
@@ -71,7 +85,7 @@ export default function ProjectCard({
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
       {/* <div className="flex flex-col gap-3 px-5 py-4"></div> */}
     </motion.div>
   );
