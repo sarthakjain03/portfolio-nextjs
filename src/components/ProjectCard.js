@@ -39,8 +39,8 @@ export default function ProjectCard({
         <Image
           src={imgUrl}
           alt="project image"
-          height={isSmall ? 182 : 320}
-          width={isSmall ? 418 : 480}
+          height={isSmall ? 220 : 320}
+          width={isSmall ? 540 : 480}
         />
       </motion.div>
       <motion.div
