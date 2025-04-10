@@ -33,7 +33,7 @@ export default function ProjectCard({
     <motion.div
       layoutId={title}
       //onClick={handleClick}
-      className="flex flex-col gap-4 border border-white shadow shadow-white rounded-2xl overflow-hidden h-fit"
+      className="flex flex-col gap-4 border border-white shadow shadow-white rounded-2xl overflow-hidden h-auto"
     >
       <motion.div>
         <Image

@@ -1,4 +1,4 @@
-export const techs = ["JavaScript", "Next.js", "React.js", "Material UI", "Tailwind", "CSS", "HTML", "C++", "Figma"];
+export const techs = ["JavaScript", "Next.js", "React.js", "Material UI", "Tailwind", "CSS", "HTML", "C++", "TypeScript"];
 
 export const techStack = {
     "JavaScript": "/javascript.png",
@@ -9,10 +9,19 @@ export const techStack = {
     "CSS": "/css.png",
     "HTML": "/html.webp",
     "C++": "/cpp.png",
-    "Figma": "/figma.png"
+    "TypeScript": "/typescript.png",
+    "MongoDB": "/mongodb.webp",
 }
 
 export const projects = [
+    {
+        title: "Socialytics",
+        imgUrl: "/socialytics.png",
+        tech: "Next.js, TypeScript, MongoDB, Material UI, Tailwind",
+        description: "Developed a social media analytics dashboard and integrated platforms like Twitter, Instagram, and GitHub for user's accounts analytics. Charts for metrics like Followers, Likes, Shares, Replies, etc.",
+        liveLink: "https://socialytics-dev.vercel.app/",
+        githubRepo: "https://github.com/sarthakjain03/social_media_analytics"
+    },
     {
         title: "AlmaMatter",
         imgUrl: "/almamatter.png",
