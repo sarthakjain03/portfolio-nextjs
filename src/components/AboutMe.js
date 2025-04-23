@@ -31,12 +31,12 @@ export default function AboutMe() {
             </span>{" "}
             with Frontend Web Development and{" "}
             <span className="border-b border-b-yellow-300">
-              6-months of professional work experience
+              1 year of professional work experience
             </span>{" "}
-            at an early stage startup in India. Proficient with React.js,
+            at 2 startups (1 established and 1 early stage) in India. Proficient with React.js,
             Tailwind CSS, Material UI. Currently learning and building with
             Next.js. Open to FTE opportunities onsite and remote in India
-            and remote internationally starting January 2025. Also interested in
+            and remote internationally starting July-Aug 2025. Also interested in
             learning new and exciting technologies.
           </p>
         </div>
