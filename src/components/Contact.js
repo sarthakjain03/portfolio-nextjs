@@ -48,7 +48,7 @@ export default function Contact() {
             <GitHub /> GitHub
           </div>
         </a>
-        <a href="mailto:sjwork76@gmail.com">
+        <a href="mailto:sarthakjain.tech@gmail.com">
           <div className="flex items-center gap-2 text-white font-ubuntu border border-cyan-400 rounded-3xl w-fit py-2 px-3">
             <Email /> Email
           </div>
