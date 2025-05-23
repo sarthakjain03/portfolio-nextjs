@@ -34,10 +34,10 @@ export default function AboutMe() {
               1 year of professional work experience
             </span>{" "}
             at 2 startups (1 established and 1 early stage) in India. Proficient with React.js,
-            Tailwind CSS, Material UI. Currently learning and building with
-            Next.js. Open to FTE opportunities onsite and remote in India
-            and remote internationally starting July-Aug 2025. Also interested in
-            learning new and exciting technologies.
+            Tailwind CSS, Material UI. Also developed projects with Next.js and Shadcn. Currently learning and building with
+            Node.js to transition to Full-stack. Open to employment opportunities onsite and remote in India
+            and remote internationally starting immediately. Always open to
+            learning new and exciting technologies. Willing to relocate to Bengaluru, Hyderabad, Gurugram, Delhi, Noida and Pune in India.
           </p>
         </div>
       </div>
