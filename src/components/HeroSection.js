@@ -17,7 +17,7 @@ export default function HeroSection() {
       <div className="text-center gap-6 flex flex-col relative">
         <h1 className="text-4xl lg:text-6xl font-poppins font-medium z-[2]">
           Hey there! I&apos;m Sarthak Jain, a{" "}
-          <span className="text-yellow-300">Frontend Web Developer</span> from
+          <span className="text-yellow-300">Fullstack Web Developer</span> from
           India
         </h1>
         <div className="flex gap-2 justify-center flex-wrap sm:flex-nowrap pb-16 sm:pb-0">
@@ -39,7 +39,9 @@ export default function HeroSection() {
                 animationsActive={!isMobile}
                 styles={{
                   position: isMobile ? "static" : "absolute",
-                  left: `${isMobile ? "calc(30%)" : isSmall ? "calc(39%)" : "calc(43%)"}`,
+                  left: `${
+                    isMobile ? "calc(30%)" : isSmall ? "calc(39%)" : "calc(43%)"
+                  }`,
                   top: `${isMobile ? "calc(30%)" : "calc(50%)"}`,
                   // left: `calc(43% + ${x})`,
                   // top: `calc(50% + ${y})`,
